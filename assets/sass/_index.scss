@@ -1,0 +1,273 @@
+//@extend 
+.bgc-white {
+    background-color: $link-white;
+}
+.mui-mt10 {
+    margin-top: .5rem;
+}
+
+//commontitle
+.commontitle{
+    position: relative;
+    h2{
+        font-size: 1rem;
+        color: $link-success;
+    }
+    .moer{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: $link-success;
+    }
+}
+
+
+//pages
+.pages{
+    padding:1rem .5rem .5rem;
+    background-color: #fff;
+    @include flexbox();
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .items{
+        width: 49%;
+        margin-bottom: .5rem;
+        .titleDiv{
+            position: relative;
+            h2{
+                color: $link-success;
+                font-size: 1rem;
+                position: relative;
+                text-indent: 10px;
+                &:before{
+                    width: 6px;
+                    height: 22px;
+                    background: $link-success;
+                    position: absolute;
+                    left: 0;
+                    top:0;
+                    content: '';
+                }
+            }
+            .more{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                font-size: .6rem;
+                color: $link-success;
+            }
+        }
+        .carouselDiv{
+            margin-top: .5rem;
+            height: 4.75rem;
+            .swiper-lazy{
+                border-radius: 8px;
+                background: none;
+            }
+            img{
+                width: 100%;
+                border-radius: 8px;
+            }
+            .swipers-title-body{
+                height: 1.1rem;
+               line-height: 1.1rem;
+            }
+            .swiper-pagination{
+                bottom: 1.2rem;
+            }
+        }
+    }
+}
+//mediaReports
+.mediaReports{
+    margin: .75rem .5rem .5rem;
+    padding: .75rem;
+    border-bottom: 1px solid #ddd;
+}
+
+//Reports
+.Reports{
+    margin-top: .9rem;
+    position: relative;
+    display: block;
+    height: 10rem;
+    h4{
+        width: 96%;
+        height: 40px;
+        line-height: 40px;
+        background:rgba(49,49,49,.75);
+        position: absolute;
+        bottom: 0;
+        color: $link-white;
+        font-size: .7rem;
+        padding: 0 2%;
+        @include text-overflow(); 
+    }
+}
+
+//tpList
+.tpList{
+    padding-top: 1rem;
+    .item{
+        @include flexbox();
+        position: relative;
+        padding: .5rem 0;
+        &:hover .infor h2{
+            color: $link-success;
+        }
+        &:before{
+            @include bottom-line();
+        }
+        &:last-child:before{
+            border-bottom: none;
+        }
+        .imgs{
+            width: 4rem;
+            height: 4rem;
+            img{
+                width: 100%;
+                height: 4rem;
+                border-radius: 8px;
+            }
+        }
+        .infor{
+            width: 12rem;
+            margin-left: .5rem;
+            h2{
+                font-size: .75rem;
+                line-height: 1.25rem;
+                font-weight: 700;
+                color: $link-gray-e3;
+                @include text-overflow(); 
+            }
+            .deta{
+                color: $link-gray-e9;
+                font-size: .65rem;
+                padding: .2rem 0;
+            }
+            .text{
+                color: $link-gray-e6;
+                font-size: .7rem;
+                @include overflow();
+                line-height: .85rem;
+            }
+        }
+    }
+}
+
+
+//lists
+.lists{
+    @include flexbox();
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: .3rem;
+    a{
+        width: 48.5%;
+        height: 4.8rem;
+        position: relative;
+        margin-top: .5rem;
+        img{
+            width: 100%;
+             height: 4.8rem;
+        }
+        h4{
+            position: absolute;
+            bottom: 0;
+            height: 30px;
+            line-height: 30px;
+            color: $link-white;
+            font-size: .65rem;
+            width: 96%;
+            padding: 0 2%;
+            background:rgba(49,49,49,.75);
+            @include text-overflow(); 
+        }
+    }
+}
+
+//cop
+.cop{
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+//links
+.links{
+    padding: 1rem 1rem 0;
+    @include flexbox();
+    .item{
+        width: 25%;
+        a{
+            display: block;
+            color: #464646;
+            font-size: .6rem;
+            padding-bottom: .3rem;
+        }
+    }
+}
+.copyright{
+    text-align: center;
+    p{padding-top: .3rem;}
+}
+
+.icons-home{
+    width: 30px;
+    height: 30px;
+    background: url(../img/hoem.png) no-repeat;
+     background-size:cover;
+    display: block;
+    margin: auto;
+}
+.icons-porj{
+    width: 22px;
+    height: 22px;
+    background: url(../img/poj.png) no-repeat;
+     background-size:cover;
+    display: block;
+    margin: 3px auto 3px;
+}
+.icons-cix{
+    width: 22px;
+    height: 22px;
+    background: url(../img/zix.png) no-repeat;
+     background-size:cover;
+    display: block;
+    margin: 3px auto 3px;
+}
+.icons-yun{
+    width: 30px;
+    height: 30px;
+    background: url(../img/yu.png) no-repeat;
+    background-size:cover;
+    display: block;
+    margin: auto;
+}
+.icons-vie{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/huatu.png) no-repeat;
+    background-size:cover;
+    float: left;
+    margin-right: 10px;
+}
+.icons-nwes{
+    display: inline-block;
+    width: 35px;
+    height: 30px;
+    background: url(../img/naer.png) no-repeat;
+    background-size:cover;
+    float: left;
+    margin-right: 10px;
+}
+.icons-zl{
+    display: block;
+    width: 35px;
+    height: 24px;
+    background: url(../img/hello.png) no-repeat;
+    background-size:cover;
+    float: left;
+    margin-right: 10px;
+}

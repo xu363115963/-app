@@ -1,0 +1,26 @@
+.logo{
+    float: left;
+    width: 120px;
+    height: 44px;
+    overflow: hidden;
+    margin-top: .3rem;
+    background: url(../img/logo.png) no-repeat;
+    background-size: 100%;
+}
+.mui-bar{
+    a{
+        color: #000 !important;
+    }
+}
+.mui-title{
+    color: #363636 !important;
+    font-size: .85rem !important;
+    font-weight: 600 !important;
+}
+.topborder{
+    a{
+        &.mui-active span{
+            color: $link-success;
+        }
+    }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>领导动态</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="assets/css/main.css" >
+		<script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0532*(750<=a?750:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+	</head>
+	<body onload="loaded()">
+		
+		<!-- Loading -->
+		<div id="loading" class="loading">
+			<div class="toast">
+				<div class="toast-text"><span class="toast-icon-loading"></span>加载中...</div>
+			</div>
+		</div>
+		<!-- // Loading -->
+		
+		<!--header-->
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back  mui-icon mui-icon-arrowleft mui-pull-left"></a>
+		    <h1 class="mui-title">领导动态</h1>
+		</header>
+		<!--//header-->
+		<!--nav-->
+		<nav class="mui-bar mui-bar-tab topborder">
+			<a class="mui-tab-item mui-active" href="#">
+				<span class="icons-home"></span>
+				<span class="mui-tab-label">云宿</span>
+			</a>
+			<a class="mui-tab-item" href="#">
+				<span class="icons-porj"></span>
+				<span class="mui-tab-label">项目</span>
+			</a>
+			<a class="mui-tab-item" href="#">
+				<span class="icons-cix"></span>
+				<span class="mui-tab-label">资讯</span>
+			</a>
+			<a class="mui-tab-item" href="#">
+				<span class="icons-yun"></span>
+				<span class="mui-tab-label">云游</span>
+			</a>
+		</nav>
+		<!--//nav-->
+		<!--mui-content-->
+		<div class="mui-content link-bgc mui-scroll-wrapper" id="pullrefresh">
+		    <div class="listItem " style="margin: 0;">
+		    	<div class="bannerDiv"><img src="assets/img/upload/5.jpg" width="100%"></div>
+		    	<ul class="link-white"></ul>
+		    </div>
+		</div>
+	   <!--mui-content //-->
+       <style>
+       	.listItem ul{
+       		margin: 0 .5rem;
+       		padding:  .5rem;
+       	}
+       	.listItem ul li {
+		  position: relative;
+		  padding: .5rem 0;
+		  background: url(assets/img/li.png) no-repeat 0 8px;
+		  word-wrap: normal;
+		  text-overflow: ellipsis;
+		  white-space: nowrap;
+		  overflow: hidden;
+		}
+	 	.listItem ul li:hover a {
+		  color: #86B81B;
+		}
+	 	.listItem ul li a {
+		  font-size: .65rem;
+		  color: #363636;
+		  font-weight: 600;
+		  padding-left: 30px;
+		}
+	 	.listItem ul li span {
+		  display: block;
+		  padding-left: 30px;
+		  padding-top: .5rem;
+		  color: #B4B4B4;
+		}
+	 	.listItem ul li:before {
+		  content: '';
+		  position: absolute;
+		  z-index: 0;
+		  bottom: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 1px;
+		  border-bottom: 1px solid #cccccc;
+		  transform: scaleY(0.5);
+		  transform-origin: 0 100%;
+		}
+	 	.listItem ul li:last-child:before {
+		  height: 0;
+		  border-bottom: none;
+		}
+    </style>
+	   <script src="assets/js/swiper.min.js"></script>
+       <script src="assets/js/jquery-2.1.4.min.js" ></script>
+	   <script src="assets/js/mui.min.js"></script>
+	   <script src="assets/js/app.js"></script>
+	   <script>
+	    var pageNow=0;
+	    var pageSize=5;
+	    mui.init({
+	        pullRefresh: {
+	            container: '#pullrefresh',
+	           
+	            up: {
+	                contentrefresh: '正在加载...',
+	                callback: pullupRefresh,
+	                auto:true
+	            }
+	        }, 
+	    });
+    
+	    var count = 0;
+	    /*** 上拉加载具体业务实现*/
+	    function pullupRefresh() {
+	        pageNow++;
+	        mui.ajax({
+	            type:"get",
+	            url:"data.json",
+	            dataType:"json",
+	            async:false,
+	            data:{
+	                page:pageNow,
+	                size:pageSize
+	            },
+	            success:function(response){
+	                var htmlList = addBox(response.data);
+	                mui('body').on('tap','a',function(){
+					    window.top.location.href=this.href;
+					});
+	                setTimeout(function() {
+	                 mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2));
+	                 $(".listItem ul").append(htmlList);
+	                }, 1000);
+	            },
+	            error:function(){
+	                alert("信息错误");
+	            }
+	        });
+	             
+	    }
+
+	    function addBox(data){
+	        var htmlList = "";
+	        $.each(data, function(obj, index){
+	            //console.log(i);
+	            htmlList +='<li>'
+	    					+'<a href="details.html">'+index.title+'</a>'
+	    					+'<span>'+index.time+'</span>'
+	    				+'</li>';          
+	       });
+	       return htmlList;
+	    }
+    </script>	
+	</body>
+</html>

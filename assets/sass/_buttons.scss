@@ -1,0 +1,89 @@
+/*buttons*/
+
+.btn-radius-sm {
+    border-radius: 3px !important;
+}
+
+.btn-radius-md {
+    border-radius: 5px !important;
+}
+
+button {
+    border: none;
+    display: block;
+    width: 100%;
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-block {
+    display: block;
+    padding: .4rem 0;
+}
+
+.btn {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    color: $link-white;
+}
+
+.btn-default {
+    color: $link-gray-e6;
+    background-color: $link-white;
+}
+
+.btn-primary {
+    background-color: $link-primary;
+    color: $link-white;
+    &:hover,
+    &:active {
+        background-color: darken($link-primary, 5%);
+    }
+}
+
+.btn-success {
+    background-color: $link-success;
+    color: $link-white;
+    &:hover,
+    &:active {
+        background-color: darken($link-success, 5%);
+    }
+}
+
+.btn-warning {
+    background-color: $link-warning;
+    color: $link-gray-e9;
+    &:hover,
+    &:active {
+        background-color: darken($link-warning, 5%);
+    }
+}
+
+.btn-danger {
+    background-color: $link-danger;
+    color: $link-white;
+    &:hover,
+    &:active {
+        background-color: darken($link-danger, 5%);
+    }
+}
+
+.btn-royal {
+    background-color: $link-royal;
+    color: $link-white;
+    &:hover,
+    &:active {
+        background-color: darken($link-royal, 5%);
+    }
+}
+
+.btn-orange {
+    background-color: $link-orange;
+    color: $link-white;
+    &:hover,
+    &:active {
+        background-color: darken($link-orange, 5%);
+    }
+}

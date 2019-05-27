@@ -1,0 +1,31 @@
+.details{
+    margin: .5rem;
+    padding: .5rem;
+    .title{
+        position: relative;
+        padding-bottom: .5rem;
+        h2{
+            font-size: .8rem;
+            line-height: 1rem;
+            color: #363636;
+            font-weight: 600;
+        }
+        p{
+            font-size: .7rem;
+            padding-top: .3rem;
+            color: #B4B4B4;
+        }
+        &:before{
+            @include bottom-line();
+        }
+    }
+    .edit{
+        padding-top: .5rem;
+        font-size: .7rem;
+        color: #404040;
+        line-height: 1.2rem;
+        img{
+            margin: .5rem 0;
+        }
+    }
+}

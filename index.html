@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="assets/css/main.css" >
+		<script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0532*(750<=a?750:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+	</head>
+	<body onload="loaded()">
+		
+		<!-- Loading -->
+		<div id="loading" class="loading">
+			<div class="toast">
+				<div class="toast-text"><span class="toast-icon-loading"></span>加载中...</div>
+			</div>
+		</div>
+		<!-- // Loading -->
+		
+		<!--header-->
+		<header class="mui-bar mui-bar-nav">
+			<div class="logo"></div>
+			<!--<span  class="mui-pull-right mui-icon mui-icon-bars" style="color: #333;" id="topPopover"></span>-->
+			<a style="color: #333;" id="menu" class="mui-action-menu mui-icon mui-icon-bars mui-pull-right" href="#topPopover"></a>
+		</header>
+		<!--//header-->
+		<!--nav-->
+		<nav class="mui-bar mui-bar-tab topborder">
+			<a class="mui-tab-item mui-active" href="#">
+				<span class="icons-home"></span>
+				<span class="mui-tab-label">云宿</span>
+			</a>
+			<a class="mui-tab-item" href="#">
+				<span class="icons-porj"></span>
+				<span class="mui-tab-label">项目</span>
+			</a>
+			<a class="mui-tab-item" href="#">
+				<span class="icons-cix"></span>
+				<span class="mui-tab-label">资讯</span>
+			</a>
+			<a class="mui-tab-item" href="#">
+				<span class="icons-yun"></span>
+				<span class="mui-tab-label">云游</span>
+			</a>
+		</nav>
+		<!--//nav-->
+		<style>
+			.cop{ margin-bottom: 0 !important;}
+			
+			.mui-plus .plus{
+				display: inline;
+			}
+			.plus{
+				display: none;
+			}
+			#topPopover {
+				position: fixed;
+				top: 16px;
+				right: 6px;
+			}
+			#topPopover .mui-popover-arrow {
+				left: auto;
+				right: 6px;
+			}
+			p {
+				text-indent: 22px;
+			}
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			.mui-popover {
+				height: 300px;
+			}
+		</style>
+		<!--右上角弹出菜单-->
+		<div id="topPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a href="details.html">Item1</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="#">Item2</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="#">Item3</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="#">Item4</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="#">Item5</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="#">Item6</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="#">Item7</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="#">Item8</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="#">Item9</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="#">Item10</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<!--mui-content-->
+		<div class="mui-content link-bgc">
+		  <!--领导动态-->	
+		  <div class="banner" style="background: #fff url(assets/img/upload/bgi.jpg) no-repeat; background-size: cover;">
+		  	 <div class="dynamic">领导动态</div> 	
+		  	 <div class="carousel">
+		  	 	 <div class="swiper-container swiper-cat-index-ad">
+	               <div class="swiper-wrapper" style="height: 10rem;">
+	                    <a class="swiper-slide">
+	                        <img data-src="assets/img/upload/1.jpg" class="swiper-lazy">
+	                        <div class="swipers-title-body">资本蜂拥的民宿:如何留住"诗和远方"</div>
+	                        <div class="swiper-lazy-preloader"></div>
+	                    </a>
+	                    <a class="swiper-slide">
+	                        <img data-src="assets/img/upload/1.jpg" class="swiper-lazy">
+	                        <div class="swipers-title-body">资本蜂拥的民宿:如何留住"诗和远方"</div>
+	                        <div class="swiper-lazy-preloader"></div>
+	                    </a>
+	               </div>
+	               <!-- Add Pagination -->
+	               <div class="swiper-pagination"></div>
+	              </div>    
+		  	 </div>
+		  </div>
+          <!--领导动态//-->
+          <!--轮播栏目-->
+          <div class="pages">
+          	<div class="items">
+          		<div class="titleDiv">
+          			<h2>建设项目</h2>
+          			<a href="#" class="more">+MORE</a>
+          		</div>
+          		<div class="carouselDiv">
+          		<div class="swiper-container swiper-cat-index-ad2" style="height: 4.75rem;">
+	               <div class="swiper-wrapper">
+	                    <a class="swiper-slide">
+	                        <img data-src="assets/img/upload/1.jpg" class="swiper-lazy">
+	                        <div class="swipers-title-body">【推荐】中国最具人气的设计师互动平台1</div>
+	                        <div class="swiper-lazy-preloader"></div>
+	                    </a>
+	                    <a  class="swiper-slide">
+	                        <img data-src="assets/img/upload/2.jpg" class="swiper-lazy">
+	                        <div class="swipers-title-body">【推荐】中国最具人气的设计师互动平台2</div>
+	                        <div class="swiper-lazy-preloader"></div>
+	                    </a>
+	               </div>
+	               <!-- Add Pagination -->
+	               <div class="swiper-pagination"></div>
+	              </div>
+          		</div>
+          	</div>
+          	<div class="items">
+          		<div class="titleDiv">
+          			<h2>经营业务</h2>
+          			<a href="#" class="more">+MORE</a>
+          		</div>
+          		<div class="carouselDiv">
+          		<div class="swiper-container swiper-cat-index-ad3" style="height: 4.75rem;">
+	               <div class="swiper-wrapper">
+	                    <a class="swiper-slide">
+	                        <img data-src="assets/img/upload/1.jpg" class="swiper-lazy">
+	                        <div class="swipers-title-body">【推荐】中国最具人气的设计师互动平台1</div>
+	                        <div class="swiper-lazy-preloader"></div>
+	                    </a>
+	                    <a  class="swiper-slide">
+	                        <img data-src="assets/img/upload/2.jpg" class="swiper-lazy">
+	                        <div class="swipers-title-body">【推荐】中国最具人气的设计师互动平台2</div>
+	                        <div class="swiper-lazy-preloader"></div>
+	                    </a>
+	               </div>
+	               <!-- Add Pagination -->
+	               <div class="swiper-pagination"></div>
+	              </div>
+          		</div>
+          	</div>
+          	<div class="items">
+          		<div class="titleDiv">
+          			<h2>云宿新闻</h2>
+          			<a href="#" class="more">+MORE</a>
+          		</div>
+          		<div class="carouselDiv">
+          		<div class="swiper-container swiper-cat-index-ad4" style="height: 4.75rem;">
+	               <div class="swiper-wrapper">
+	                    <a class="swiper-slide">
+	                        <img data-src="assets/img/upload/1.jpg" class="swiper-lazy">
+	                        <div class="swipers-title-body">【推荐】中国最具人气的设计师互动平台1</div>
+	                        <div class="swiper-lazy-preloader"></div>
+	                    </a>
+	                    <a  class="swiper-slide">
+	                        <img data-src="assets/img/upload/2.jpg" class="swiper-lazy">
+	                        <div class="swipers-title-body">【推荐】中国最具人气的设计师互动平台2</div>
+	                        <div class="swiper-lazy-preloader"></div>
+	                    </a>
+	               </div>
+	               <!-- Add Pagination -->
+	               <div class="swiper-pagination"></div>
+	              </div>
+          		</div>
+          	</div>
+          	<div class="items">
+          		<div class="titleDiv">
+          			<h2>智慧云游</h2>
+          			<a href="#" class="more">+MORE</a>
+          		</div>
+          		<div class="carouselDiv">
+          		<div class="swiper-container swiper-cat-index-ad5" style="height: 4.75rem;">
+	               <div class="swiper-wrapper">
+	                    <a class="swiper-slide">
+	                        <img data-src="assets/img/upload/1.jpg" class="swiper-lazy">
+	                        <div class="swipers-title-body">【推荐】中国最具人气的设计师互动平台1</div>
+	                        <div class="swiper-lazy-preloader"></div>
+	                    </a>
+	                    <a  class="swiper-slide">
+	                        <img data-src="assets/img/upload/2.jpg" class="swiper-lazy">
+	                        <div class="swipers-title-body">【推荐】中国最具人气的设计师互动平台2</div>
+	                        <div class="swiper-lazy-preloader"></div>
+	                    </a>
+	               </div>
+	               <!-- Add Pagination -->
+	               <div class="swiper-pagination"></div>
+	              </div>
+          		</div>
+          	</div>
+          </div>
+          <!--//轮播栏目-->
+          <!--媒体报道-->
+          <div class="mediaReports link-white">
+          	 <div class="commontitle">
+          		<h2><span class="icons-vie"></span>媒体报道</h2>
+          		<a href="#" class="moer">MORE <spna class="mui-icon mui-icon-redo"></spna></a>
+          	 </div>
+          	 <a class="Reports" href="details.html">
+          	 	<img src="assets/img/upload/3.jpg" width="100%" alt="">
+          	 	<h4>创业创新大赛海南分赛比赛成功举办</h4>
+          	 </a>
+          	 <div class="tpList">
+  	 			<a href="#" class="item">
+  	 				<div class="imgs"><img src="assets/img/upload/4.jpg" width="100%" alt=""></div>
+  	 				<div class="infor">
+  	 					<h2>创业创新大赛海南分赛比赛成功举办</h2>
+  	 					<p class="deta">2018-04-27</p>
+  	 					<p class="text">11月11日清晨，2016中国“互联网+”创业创新 大赛海南赛区在海口市演丰创新创业</p>
+  	 				</div>
+  	 			</a>
+  	 			<a href="#" class="item">
+  	 				<div class="imgs"><img src="assets/img/upload/4.jpg" width="100%" alt=""></div>
+  	 				<div class="infor">
+  	 					<h2>创业创新大赛海南分赛比赛成功举办</h2>
+  	 					<p class="deta">2018-04-27</p>
+  	 					<p class="text">11月11日清晨，2016中国“互联网+”创业创新 大赛海南赛区在海口市演丰创新创业</p>
+  	 				</div>
+  	 			</a>
+  	 			<a href="#" class="item">
+  	 				<div class="imgs"><img src="assets/img/upload/4.jpg" width="100%" alt=""></div>
+  	 				<div class="infor">
+  	 					<h2>创业创新大赛海南分赛比赛成功举办</h2>
+  	 					<p class="deta">2018-04-27</p>
+  	 					<p class="text">11月11日清晨，2016中国“互联网+”创业创新 大赛海南赛区在海口市演丰创新创业</p>
+  	 				</div>
+  	 			</a>
+  	 			<a href="#" class="item">
+  	 				<div class="imgs"><img src="assets/img/upload/4.jpg" width="100%" alt=""></div>
+  	 				<div class="infor">
+  	 					<h2>创业创新大赛海南分赛比赛成功举办</h2>
+  	 					<p class="deta">2018-04-27</p>
+  	 					<p class="text">11月11日清晨，2016中国“互联网+”创业创新 大赛海南赛区在海口市演丰创新创业</p>
+  	 				</div>
+  	 			</a>
+          	 </div>
+          </div>
+          <!--媒体报道//-->
+          <!--业界新闻-->
+          <div class="mediaReports link-white">
+          	 <div class="commontitle">
+          		<h2><span class="icons-nwes"></span>业界新闻</h2>
+          		<a href="#" class="moer">MORE <spna class="mui-icon mui-icon-redo"></spna></a>
+          	 </div>
+          	 <a class="Reports" href="#">
+          	 	<img src="assets/img/upload/1.jpg" width="100%" alt="">
+          	 	<h4>创业创新大赛海南分赛比赛成功举办</h4>
+          	 </a>
+          	 <div class="tpList">
+  	 			<a href="#" class="item">
+  	 				<div class="imgs"><img src="assets/img/upload/4.jpg" width="100%" alt=""></div>
+  	 				<div class="infor">
+  	 					<h2>创业创新大赛海南分赛比赛成功举办</h2>
+  	 					<p class="deta">2018-04-27</p>
+  	 					<p class="text">11月11日清晨，2016中国“互联网+”创业创新 大赛海南赛区在海口市演丰创新创业</p>
+  	 				</div>
+  	 			</a>
+  	 			<a href="#" class="item">
+  	 				<div class="imgs"><img src="assets/img/upload/4.jpg" width="100%" alt=""></div>
+  	 				<div class="infor">
+  	 					<h2>创业创新大赛海南分赛比赛成功举办</h2>
+  	 					<p class="deta">2018-04-27</p>
+  	 					<p class="text">11月11日清晨，2016中国“互联网+”创业创新 大赛海南赛区在海口市演丰创新创业</p>
+  	 				</div>
+  	 			</a>
+  	 			<a href="#" class="item">
+  	 				<div class="imgs"><img src="assets/img/upload/4.jpg" width="100%" alt=""></div>
+  	 				<div class="infor">
+  	 					<h2>创业创新大赛海南分赛比赛成功举办</h2>
+  	 					<p class="deta">2018-04-27</p>
+  	 					<p class="text">11月11日清晨，2016中国“互联网+”创业创新 大赛海南赛区在海口市演丰创新创业</p>
+  	 				</div>
+  	 			</a>
+  	 			<a href="#" class="item">
+  	 				<div class="imgs"><img src="assets/img/upload/4.jpg" width="100%" alt=""></div>
+  	 				<div class="infor">
+  	 					<h2>创业创新大赛海南分赛比赛成功举办</h2>
+  	 					<p class="deta">2018-04-27</p>
+  	 					<p class="text">11月11日清晨，2016中国“互联网+”创业创新 大赛海南赛区在海口市演丰创新创业</p>
+  	 				</div>
+  	 			</a>
+          	 </div>
+          </div>
+          <!--业界新闻//-->
+          <!--战略伙伴-->
+          <div class="mediaReports link-white">
+          	 <div class="commontitle">
+          		<h2><span class="icons-zl"></span>战略伙伴</h2>
+          		<a href="#" class="moer">MORE <spna class="mui-icon mui-icon-redo"></spna></a>
+          	 </div>
+          	 <div class="lists">
+          	 	<a href="#">
+          	 		<img src="assets/img/upload/1.jpg" width="100%" alt="">
+          	 	    <h4>创业创新大赛海南分赛比赛成功举办</h4>
+          	 	</a>
+          	 	<a href="#">
+          	 		<img src="assets/img/upload/1.jpg" width="100%" alt="">
+          	 	    <h4>创业创新大赛海南分赛比赛成功举办</h4>
+          	 	</a>
+          	 	<a href="#">
+          	 		<img src="assets/img/upload/1.jpg" width="100%" alt="">
+          	 	    <h4>创业创新大赛海南分赛比赛成功举办</h4>
+          	 	</a>
+          	 	<a href="#">
+          	 		<img src="assets/img/upload/1.jpg" width="100%" alt="">
+          	 	    <h4>创业创新大赛海南分赛比赛成功举办</h4>
+          	 	</a>
+          	 	<a href="#">
+          	 		<img src="assets/img/upload/1.jpg" width="100%" alt="">
+          	 	    <h4>创业创新大赛海南分赛比赛成功举办</h4>
+          	 	</a>
+          	 	<a href="#">
+          	 		<img src="assets/img/upload/1.jpg" width="100%" alt="">
+          	 	    <h4>创业创新大赛海南分赛比赛成功举办</h4>
+          	 	</a>
+          	 </div>
+          </div>	 
+          <!--战略伙伴//-->
+          
+					<!--版权-->
+					<div class="cop" style="background: #B4C987 url(assets/img/footer.png) no-repeat right bottom;">
+						<div class="links">
+							<div class="item">
+								<a href="#">联系我们</a>    
+								<a href="#">联系方式</a>
+								<a href="#">意见反馈</a>
+							</div>
+							<div class="item">
+								<a href="#">加入我们  </a>
+								<a href="#">团队风采</a>
+							</div>
+							<div class="item">
+								<a href="#">友情链接    </a>
+								<a href="#">云游直播</a>
+								<a href="#">云商直播</a>
+								<a href="#">行程助手</a>
+							</div>
+							<div class="item">
+								<a href="#">社会公益   </a>
+								<a href="#">海洋生态保护协会</a>
+								<a href="#">海南休闲房车协会</a>
+							</div>
+						</div>
+						<div class="copyright">
+							<p>版权所有©2000-2017 海南云宿乡土旅游发展有限公司 </p>
+							<p>京ICP备13025710号-1 京公网安备11010802020367号</p>
+						</div>
+					</div>
+					<!--版权//-->
+          
+		</div>
+	   <!--mui-content //-->
+	 
+		 
+		 
+		  <script src="assets/js/swiper.min.js"></script>
+      <script src="assets/js/jquery-2.1.4.min.js" ></script>
+	    <script src="assets/js/mui.min.js"></script>
+	    <script src="assets/js/app.js"></script>
+	</body>
+</html>
